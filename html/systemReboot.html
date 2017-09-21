@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>管理平台</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <link href="../assets/global/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/global/plugins/simple-line-icons/simple-line-icons.min.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/global/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/global/css/components.min.css" rel="stylesheet" id="style_components" type="text/css" />
+    <link href="../assets/global/css/plugins.min.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/layouts/layout/css/layout.min.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/layouts/layout/css/themes/darkblue.min.css" rel="stylesheet" type="text/css" id="style_color" />
+    <link href="../assets/global/plugins/bootstrap-switch/css/bootstrap-switch.min.css" rel="stylesheet" type="text/css" />
+    <!--<link href="../assets/global/plugins/bootstrap-editable/inputs-ext/address/address.css" rel="stylesheet"-->
+    <!--type="text/css"/>-->
+    <!--<link href="../assets/global/plugins/bootstrap-editable/bootstrap-editable/css/bootstrap-editable.css"-->
+    <!--rel="stylesheet" type="text/css"/>-->
+    <!--<link href="../assets/global/plugins/bootstrap-select/css/bootstrap-select.css" rel="stylesheet" type="text/css"/>-->
+    <!--<link href="../assets/global/plugins/bootstrap-fileinput/bootstrap-fileinput.css" rel="stylesheet" type="text/css"/>-->
+    <!--<link href="../assets/global/plugins/ladda/ladda-themeless.min.css" rel="stylesheet" type="text/css"/>-->
+    <link href="../assets/global/plugins/bootstrap-daterangepicker/daterangepicker.min.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/global/plugins/bootstrap-datepicker/css/bootstrap-datepicker3.min.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/global/plugins/bootstrap-timepicker/css/bootstrap-timepicker.min.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/global/plugins/bootstrap-datetimepicker/css/bootstrap-datetimepicker.min.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/global/plugins/clockface/css/clockface.css" rel="stylesheet" type="text/css" />
+    <!--测试结束-->
+</head>
+<!-- END HEAD -->
+
+<body class="page-header-fixed page-sidebar-closed-hide-logo page-container-bg-solid page-content-white">
+    <div class="page-wrapper">
+        <!-- BEGIN HEADER -->
+        <div class="page-header navbar navbar-fixed-top">
+            <!-- BEGIN HEADER INNER -->
+            <div class="page-header-inner ">
+                <!-- BEGIN LOGO -->
+                <div class="page-logo">
+                    <a href="javascript:;">
+                    <img src="../assets/layouts/layout/img/logo.png" alt="logo" class="logo-default" width="87" height="14"/> </a>
+                    <div class="menu-toggler sidebar-toggler">
+                        <span></span>
+                    </div>
+                </div>
+                <!-- END LOGO -->
+                <!-- BEGIN RESPONSIVE MENU TOGGLER -->
+                <a href="javascript:;" class="menu-toggler responsive-toggler" data-toggle="collapse" data-target=".navbar-collapse">
+                <span></span>
+            </a>
+                <!-- END RESPONSIVE MENU TOGGLER -->
+                <!-- BEGIN TOP NAVIGATION MENU -->
+                <div class="top-menu">
+                    <ul class="nav navbar-nav pull-right">
+                        <!-- BEGIN USER LOGIN DROPDOWN -->
+                        <!-- DOC: Apply "dropdown-dark" class after below "dropdown-extended" to change the dropdown styte -->
+                        <li class="dropdown dropdown-user">
+                            <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
+                            <span class="username username-hide-on-mobile"> Nick </span>
+                            <!--<i class="fa fa-angle-down"></i>-->
+                        </a>
+                        </li>
+                        <!-- END USER LOGIN DROPDOWN -->
+                        <!-- BEGIN QUICK SIDEBAR TOGGLER -->
+                        <!-- DOC: Apply "dropdown-dark" class after below "dropdown-extended" to change the dropdown styte -->
+                        <li class="dropdown dropdown-quick-sidebar-toggler">
+                            <a href="javascript:;" class="dropdown-toggle">
+                            <i class="icon-logout"></i>
+                        </a>
+                        </li>
+                        <!-- END QUICK SIDEBAR TOGGLER -->
+                    </ul>
+                </div>
+                <!-- END TOP NAVIGATION MENU -->
+            </div>
+            <!-- END HEADER INNER -->
+        </div>
+        <!-- END HEADER -->
+        <!-- BEGIN HEADER & CONTENT DIVIDER -->
+        <div class="clearfix"></div>
+        <!-- END HEADER & CONTENT DIVIDER -->
+        <!-- BEGIN CONTAINER -->
+        <div class="page-container">
+            <!-- BEGIN SIDEBAR -->
+            <div class="page-sidebar-wrapper">
+                <!-- BEGIN SIDEBAR -->
+                <!-- DOC: Set data-auto-scroll="false" to disable the sidebar from auto scrolling/focusing -->
+                <!-- DOC: Change data-auto-speed="200" to adjust the sub menu slide up/down speed -->
+                <div class="page-sidebar navbar-collapse collapse">
+                    <!-- BEGIN SIDEBAR MENU -->
+                    <!-- DOC: Apply "page-sidebar-menu-light" class right after "page-sidebar-menu" to enable light sidebar menu style(without borders) -->
+                    <!-- DOC: Apply "page-sidebar-menu-hover-submenu" class right after "page-sidebar-menu" to enable hoverable(hover vs accordion) sub menu mode -->
+                    <!-- DOC: Apply "page-sidebar-menu-closed" class right after "page-sidebar-menu" to collapse("page-sidebar-closed" class must be applied to the body element) the sidebar sub menu mode -->
+                    <!-- DOC: Set data-auto-scroll="false" to disable the sidebar from auto scrolling/focusing -->
+                    <!-- DOC: Set data-keep-expand="true" to keep the submenues expanded -->
+                    <!-- DOC: Set data-auto-speed="200" to adjust the sub menu slide up/down speed -->
+                    <ul class="page-sidebar-menu  page-header-fixed " data-keep-expanded="false" data-auto-scroll="true" data-slide-speed="200" style="padding-top: 20px">
+                        <!-- DOC: To remove the sidebar toggler from the sidebar you just need to completely remove the below "sidebar-toggler-wrapper" LI element -->
+                        <!-- BEGIN SIDEBAR TOGGLER BUTTON -->
+                        <!-- END SIDEBAR TOGGLER BUTTON -->
+                        <!-- DOC: To remove the search box from the sidebar you just need to completely remove the below "sidebar-search-wrapper" LI element -->
+                        <li class="sidebar-search-wrapper" </li>
+                            <li class="nav-item  ">
+                                <a href="index.html" class="nav-link nav-toggle">
+                            <i class="icon-home"></i>
+                            <!--<i class="iconfont icon-iconset0401"></i>-->
+                            <span class="title">系统状态</span>
+                            <span class="selected"></span>
+                            <span class="arrow open"></span>
+                        </a>
+                                <ul class="sub-menu">
+                                    <li class="nav-item start">
+                                        <a href="index.html" class="nav-link ">
+                                    <i class="icon-bar-chart"></i>
+                                    <span class="title">系统总览</span>
+                                    <span class="selected"></span>
+                                </a>
+                                    </li>
+                                    <li class="nav-item  ">
+                                        <a href="networksetting.html" class="nav-link ">
+                                    <i class="icon-bulb"></i>
+                                    <span class="title">网络设置</span>
+                                </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="nav-item  active">
+                                <a href="javascript:;" class="nav-link nav-toggle">
+                            <i class="icon-diamond"></i>
+                            <span class="title">系统工具</span>
+                            <span class="arrow"></span>
+                        </a>
+                                <ul class="sub-menu">
+                                    <li class="nav-item">
+                                        <a href="systemInfo.html" class="nav-link ">
+                                    <i class="icon-bulb"></i>
+                                    <span class="title">基础信息管理</span>
+                                </a>
+                                    </li>
+                                    <li class="nav-item  ">
+                                        <a href="systemUpdate.html" class="nav-link ">
+                                    <i class="icon-bulb"></i>
+                                    <span class="title">固件管理</span>
+                                </a>
+                                    </li>
+                                    <li class="nav-item open ">
+                                        <a href="systemReboot.html" class="nav-link ">
+                                    <i class="icon-bulb"></i>
+                                    <span class="title">重启管理</span>
+                                </a>
+                                    </li>
+                                    >
+                                </ul>
+                            </li>
+                    </ul>
+                    <!-- END SIDEBAR MENU -->
+                    <!-- END SIDEBAR MENU -->
+                </div>
+                <!-- END SIDEBAR -->
+            </div>
+            <!-- END SIDEBAR -->
+            <!-- BEGIN CONTENT -->
+            <div class="page-content-wrapper">
+                <!-- BEGIN CONTENT BODY -->
+                <div class="page-content">
+                    <!-- BEGIN PAGE HEADER-->
+                    <!-- BEGIN PAGE BAR -->
+                    <div class="page-bar">
+                        <ul class="page-breadcrumb">
+                            <li>
+                                <!--<a href="javascript:;">管理首页</a>-->
+                                <span>系统工具</span>
+                                <i class="fa fa-circle"></i>
+                            </li>
+                            <li>
+                                <span>重启管理</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- END PAGE BAR -->
+                    <!-- BEGIN PAGE TITLE-->
+                    <h1 class="page-title">重启管理
+                    <small>本地重启/定时重启</small>
+                </h1>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="tabbable-line boxless tabbable-reversed">
+                                <ul class="nav nav-tabs">
+                                    <li class="active">
+                                        <a href="#tab_0" data-toggle="tab" aria-expanded="true"> 本地重启 </a>
+                                    </li>
+                                    <li class="">
+                                        <a href="#tab_1" data-toggle="tab" aria-expanded="false"> 定时重启 </a>
+                                    </li>
+                                </ul>
+                                <div class="tab-content">
+                                    <div class="tab-pane active" id="tab_0">
+                                        <div class="portlet box blue ">
+                                            <div class="portlet-title">
+                                                <div class="caption">
+                                                    <i class="fa fa-gift"></i>本地重启
+                                                </div>
+                                            </div>
+                                            <div class="portlet-body form">
+                                                <!-- BEGIN FORM-->
+                                                <form action="#" class="form-horizontal form-bordered">
+                                                    <div class="form-body">
+                                                        <div class="form-group">
+                                                            <div class="col-md-4">
+                                                                <div class="form-control-static">
+                                                                    立即重启当前设备
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-actions">
+                                                        <div class="row">
+                                                            <div class="col-md-12">
+                                                                <div class="row">
+                                                                    <div class="col-md-offset-3 col-md-9">
+                                                                        <button type="submit" class="btn green">
+                                                                            <i class="fa fa-check"></i> 立即重启
+                                                                        </button>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </form>
+                                                <!-- END FORM-->
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tab-pane" id="tab_1">
+                                        <div class="portlet box blue ">
+                                            <div class="portlet-title">
+                                                <div class="caption">
+                                                    <i class="fa fa-gift"></i>定时重启
+                                                </div>
+                                            </div>
+                                            <div class="portlet-body form">
+                                                <!-- BEGIN FORM-->
+                                                <form action="#" class="form-horizontal form-bordered">
+                                                    <div class="form-body">
+                                                        <div class="form-group">
+                                                            <label class="control-label col-md-3">定时开关</label>
+                                                            <div class="col-md-4">
+                                                                <div class="form-control-static">
+                                                                    <div class="bootstrap-switch bootstrap-switch-wrapper bootstrap-switch-mini
+                                                bootstrap-switch-id-test bootstrap-switch-animate bootstrap-switch-on" style="width: 69px;" name="switchDiv">
+                                                                        <div class="bootstrap-switch-container" style="width: 100px; margin-left: 0px;"><span class="bootstrap-switch-handle-on bootstrap-switch-primary" style="width: 33px;">ON</span><span class="bootstrap-switch-label" style="width: 33px;">&nbsp;</span><span class="bootstrap-switch-handle-off bootstrap-switch-default" style="width: 33px;">OFF</span>
+                                                                            <input type="checkbox" checked="" class="make-switch" id="test" data-size="mini">
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label class="control-label col-md-3">重启时间</label>
+                                                            <div class="col-md-4">
+                                                                <div class="input-icon">
+                                                                    <i class="fa fa-clock-o"></i>
+                                                                    <input type="text" class="form-control timepicker timepicker-default">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-actions">
+                                                        <div class="row">
+                                                            <div class="col-md-12">
+                                                                <div class="row">
+                                                                    <div class="col-md-offset-3 col-md-9">
+                                                                        <button type="submit" class="btn green">
+                                                                            <i class="fa fa-check"></i> 保存
+                                                                        </button>
+                                                                        <button type="button" class="btn red">
+                                                                            <i class="fa fa-warning"></i> 复位
+                                                                        </button>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </form>
+                                                <!-- END FORM-->
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- END CONTENT BODY -->
+                    </div>
+                    <!-- END CONTENT -->
+                    <!-- BEGIN QUICK SIDEBAR -->
+                    <a href="javascript:;" class="page-quick-sidebar-toggler">
+                    <i class="icon-login"></i>
+                </a>
+                    <div class="page-quick-sidebar-wrapper" data-close-on-body-click="false">
+                        <div class="page-quick-sidebar">
+                            <ul class="nav nav-tabs">
+                                <li class="active">
+                                    <a href="javascript:;" data-target="#quick_sidebar_tab_1" data-toggle="tab"> Users
+                                    <span class="badge badge-danger">2</span>
+                                </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:;" data-target="#quick_sidebar_tab_2" data-toggle="tab"> Alerts
+                                    <span class="badge badge-success">7</span>
+                                </a>
+                                </li>
+                                <li class="dropdown">
+                                    <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown"> More
+                                    <i class="fa fa-angle-down"></i>
+                                </a>
+                                    <ul class="dropdown-menu pull-right">
+                                        <li>
+                                            <a href="javascript:;" data-target="#quick_sidebar_tab_3" data-toggle="tab">
+                                            <i class="icon-bell"></i> Alerts </a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:;" data-target="#quick_sidebar_tab_3" data-toggle="tab">
+                                            <i class="icon-info"></i> Notifications </a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:;" data-target="#quick_sidebar_tab_3" data-toggle="tab">
+                                            <i class="icon-speech"></i> Activities </a>
+                                        </li>
+                                        <li class="divider"></li>
+                                        <li>
+                                            <a href="javascript:;" data-target="#quick_sidebar_tab_3" data-toggle="tab">
+                                            <i class="icon-settings"></i> Settings </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                        </div>
+                    </div>
+                    <!-- END QUICK SIDEBAR -->
+                </div>
+                <!-- END CONTAINER -->
+            </div>
+        </div>
+    </div>
+    <!--[if lt IE 9]>
+<script src="../assets/global/plugins/respond.min.js"></script>
+<script src="../assets/global/plugins/excanvas.min.js"></script>
+<script src="../assets/global/plugins/ie8.fix.min.js"></script>
+<![endif]-->
+    <script src="../assets/global/plugins/jquery.min.js" type="text/javascript"></script>
+    <script src="../assets/global/plugins/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+    <!--<script src="../assets/global/plugins/bootstrap-switch/js/bootstrap-switch.min.js"-->
+    <!--type="text/javascript"></script>-->
+    <script src="../assets/global/plugins/bootstrap-datepicker/js/bootstrap-datepicker.min.js" type="text/javascript"></script>
+    <script src="../assets/global/plugins/bootstrap-datetimepicker/js/bootstrap-datetimepicker.min.js" type="text/javascript"></script>
+    <script src="../assets/global/plugins/moment.min.js" type="text/javascript"></script>
+    <script src="../assets/global/scripts/app.min.js" type="text/javascript"></script>
+    <script src="../assets/layouts/layout/scripts/layout.min.js" type="text/javascript"></script>
+    <script src="../assets/global/plugins/bootstrap-daterangepicker/daterangepicker.min.js" type="text/javascript"></script>
+    <script src="../assets/global/plugins/bootstrap-datepicker/js/bootstrap-datepicker.min.js" type="text/javascript"></script>
+    <script src="../assets/global/plugins/bootstrap-timepicker/js/bootstrap-timepicker.min.js" type="text/javascript"></script>
+    <script src="../assets/global/plugins/bootstrap-datetimepicker/js/bootstrap-datetimepicker.min.js" type="text/javascript"></script>
+    <script src="../assets/global/plugins/clockface/js/clockface.js" type="text/javascript"></script>
+    <script src="../assets/pages/scripts/components-date-time-pickers.min.js" type="text/javascript"></script>
+    <script type="text/javascript">
+    ////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    // 普通开关切换
+    $("div[name=switchDiv]").click(function() {
+        if ($(this).hasClass("bootstrap-switch-on")) {
+            // 切换到off
+            $(this).removeClass("bootstrap-switch-on");
+            $(this).addClass("bootstrap-switch-off");
+            $(this).children().first().css("margin-left", "-33px");
+
+            // 隐藏下方控件
+            $(this).parent().parent().parent().next().hide();
+        } else {
+            // 切换到on
+            $(this).removeClass("bootstrap-switch-off");
+            $(this).addClass("bootstrap-switch-on");
+            $(this).children().first().css("margin-left", "0px");
+            // 显示下方控件
+            $(this).parent().parent().parent().next().show();
+        }
+    })
+    </script>
+</body>
+
+</html>

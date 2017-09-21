@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>管理平台</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <link href="../assets/global/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/global/plugins/simple-line-icons/simple-line-icons.min.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/global/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/global/css/components.min.css" rel="stylesheet" id="style_components" type="text/css" />
+    <link href="../assets/global/css/plugins.min.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/layouts/layout/css/layout.min.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/layouts/layout/css/themes/darkblue.min.css" rel="stylesheet" type="text/css" id="style_color" />
+    <link rel="stylesheet" href="../assets/global/plugins/bootstrap-table-master/bootstrap-table.min.css" type="text/css">
+    <link href="../assets/global/plugins/bootstrap-switch/css/bootstrap-switch.min.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body class="page-header-fixed page-sidebar-closed-hide-logo page-container-bg-solid page-content-white">
+    <div class="page-wrapper">
+        <div class="page-header navbar navbar-fixed-top">
+            <div class="page-header-inner ">
+                <div class="page-logo">
+                    <a href="javascript:;">
+                    <img src="../assets/layouts/layout/img/logo.png" alt="logo" class="logo-default" width="87" height="14"/> </a>
+                    <div class="menu-toggler sidebar-toggler">
+                        <span></span>
+                    </div>
+                </div>
+                <a href="javascript:;" class="menu-toggler responsive-toggler" data-toggle="collapse" data-target=".navbar-collapse">
+                <span></span>
+            </a>
+                <div class="top-menu">
+                    <ul class="nav navbar-nav pull-right">
+                        <li class="dropdown dropdown-user">
+                            <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
+                            <span class="username username-hide-on-mobile"> Nick </span>
+                        </a>
+                        </li>
+                        <li class="dropdown dropdown-quick-sidebar-toggler">
+                            <a href="javascript:;" class="dropdown-toggle">
+                            <i class="icon-logout"></i>
+                        </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="clearfix"></div>
+        <div class="page-container">
+            <div class="page-sidebar-wrapper">
+                <div class="page-sidebar navbar-collapse collapse">
+                    <ul class="page-sidebar-menu  page-header-fixed " data-keep-expanded="false" data-auto-scroll="true" data-slide-speed="200" style="padding-top: 20px">
+                        <li class="sidebar-search-wrapper">
+                        </li>
+                        <li class="nav-item start">
+                            <a href="index.html" class="nav-link nav-toggle">
+                            <i class="icon-home"></i>
+                            <span class="title">系统状态</span>
+                            <span class="arrow"></span>
+                        </a>
+                            <ul class="sub-menu">
+                                <li class="nav-item start">
+                                    <a href="index.html" class="nav-link ">
+                                    <i class="icon-bar-chart"></i>
+                                    <span class="title">系统总览</span>
+                                </a>
+                                </li>
+                                <li class="nav-item start">
+                                    <a href="quickConfig.html" class="nav-link ">
+                                    <i class="icon-bulb"></i>
+                                    <span class="title">快速配置</span>
+                                </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item  active">
+                            <a href="javascript:;" class="nav-link nav-toggle">
+                            <i class="icon-diamond"></i>
+                            <span class="title">网络管理</span>
+                            <span class="arrow open"></span>
+                        </a>
+                            <ul class="sub-menu">
+                                <li class="nav-item  ">
+                                    <a href="networksetting.html" class="nav-link ">
+                                    <i class="icon-bulb"></i>
+                                    <span class="title">网络设置</span>
+                                </a>
+                                </li>
+                                <li class="nav-item open ">
+                                    <a href="vlan.html" class="nav-link ">
+                                    <i class="icon-bulb"></i>
+                                    <span class="title">无线设置</span>
+                                    <span class="selected"></span>
+
+                                </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item  ">
+                            <a href="javascript:;" class="nav-link nav-toggle">
+                            <i class="icon-diamond"></i>
+                            <span class="title">系统工具</span>
+                            <span class="arrow"></span>
+                        </a>
+                            <ul class="sub-menu">
+                                <li class="nav-item  ">
+                                    <a href="systemInfo.html" class="nav-link ">
+                                    <i class="icon-bulb"></i>
+                                    <span class="title">基础信息管理</span>
+                                </a>
+                                </li>
+                                <li class="nav-item  ">
+                                    <a href="systemUpdate.html" class="nav-link ">
+                                    <i class="icon-bulb"></i>
+                                    <span class="title">固件管理</span>
+                                </a>
+                                </li>
+                                <li class="nav-item  ">
+                                    <a href="systemReboot.html" class="nav-link ">
+                                    <i class="icon-bulb"></i>
+                                    <span class="title">重启管理</span>
+                                </a>
+                                </li>
+                                >
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="page-content-wrapper">
+                <div class="page-content">
+                    <div class="page-bar">
+                        <ul class="page-breadcrumb">
+                            <li>
+                                <span>网络管理</span>
+                                <i class="fa fa-circle"></i>
+                            </li>
+                            <li>
+                                <span>无线设置</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <h1 class="page-title">无线设置
+                    <small></small>
+                </h1>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="tabbable-line boxless tabbable-reversed">
+                                <ul class="nav nav-tabs" id="navTabs">
+                                    <li class="active" id="liTab_0">
+                                        <a href="tab_0" data-toggle="tab" aria-expanded="true">0</a>
+                                    </li>
+                                    <li class="" id="liTab_1">
+                                        <a href="tab_1" data-toggle="tab" aria-expanded="false">1</a>
+                                    </li>
+                                    <li class="" id="liTab_2">
+                                        <a href="tab_2" data-toggle="tab" aria-expanded="false">2</a>
+                                    </li>
+                                </ul>
+                                <div class="tab-content" id="tabContentPage">
+                                    <div class="tab-pane active" id="tab_0">
+                                        <!-- BEGIN 基本设置  PORTLET-->
+                                        <div class="portlet box blue ">
+                                            <div class="portlet-title">
+                                                <div class="caption" id="captionTabs_1">
+                                                    <i class="fa fa-cog"></i>基本设置
+                                                </div>
+                                                <div class="tools">
+                                                    <a href="javascript:;" class="collapse" data-original-title="" title="隐藏/显示"> </a>
+                                                </div>
+                                                <div class="actions">
+                                                    <a href="#settingDlg" class="btn btn-default btn-sm" data-toggle="modal">
+                                                    <i class="fa fa-save"></i> 保存 </a>
+                                                </div>
+                                            </div>
+                                            <div class="portlet-body form">
+                                                <!-- BEGIN FORM-->
+                                                <form class="form-horizontal form-bordered form-row-stripped">
+                                                    <div class="form-body">
+                                                        <div class="form-group">
+                                                            <label class="control-label col-md-3">终端数限制开关</label>
+                                                            <div class="col-md-6">
+                                                                <input type="checkbox" id="maxConSwitch" name="switchCtl" checked>
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label class="control-label col-md-3">最大终端数</label>
+                                                            <div class="col-md-6">
+                                                                <input type="text" placeholder="允许最多连接终端数量" class="form-control" value="30">
+                                                                <span class="help-block"> 范围[1至60] </span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label class="control-label col-md-3">禁止弱信号开关</label>
+                                                            <div class="col-md-6">
+                                                                <input type="checkbox" id="signalSwitch" name="switchCtl" checked>
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label class="control-label col-md-3">最弱信号设置</label>
+                                                            <div class="col-md-6">
+                                                                <input type="text" placeholder="允许连接的最弱信号强度" class="form-control" value="-75">
+                                                                <span class="help-block"> 范围[-90至-55] </span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label class="control-label col-md-3">最弱信号持续时间</label>
+                                                            <div class="col-md-6">
+                                                                <input type="text" placeholder="最弱信号持续的时间（秒）" class="form-control" value="60">
+                                                                <span class="help-block"> 单位：秒。达到以上时间后终端将会掉线。 </span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </form>
+                                                <!-- END FORM-->
+                                            </div>
+                                        </div>
+                                        <!-- END 基本设置 PORTLET-->
+                                        <!-- BEGIN SSID管理 TABLE PORTLET-->
+                                        <div class="portlet light portlet-fit portlet-datatable bordered">
+                                            <div class="portlet-title">
+                                                <div class="caption">
+                                                    <i class=" icon-layers font-blue"></i>
+                                                    <span class="caption-subject font-blue sbold uppercase">SSID管理</span>
+                                                </div>
+                                            </div>
+                                            <div class="portlet-body">
+                                                <div class="btn-group" id="toolbar">
+                                                    <a href="javascript:;" class="btn blue btn-circle" style="margin-right: 20px" id="addSSID">
+                                                        <i class="fa fa-plus"></i> 新增SSID 
+                                                    </a>
+                                                </div>
+                                                <table id="tableTab0"></table>
+                                            </div>
+                                        </div>
+                                        <!-- END SSID管理 TABLE PORTLET-->
+                                    </div>
+                                    <div class="tab-pane" id="tab_1">
+                                        <div class="portlet box blue ">
+                                            <div class="portlet-title">
+                                                <div class="caption" id="captionTabs_1">
+                                                    <i class="fa fa-gift"></i>5.8G无线设置
+                                                </div>
+                                            </div>
+                                            <div class="portlet-body form">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tab-pane" id="tab_2">
+                                        <div class="portlet box blue ">
+                                            <div class="portlet-title">
+                                                <div class="caption" id="captionTabs_2">
+                                                    <i class="fa fa-gift"></i>5.8G无线设置
+                                                </div>
+                                            </div>
+                                            <div class="portlet-body form">
+                                                <!-- BEGIN FORM-->
+                                                <!-- END FORM-->
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade in" id="settingDlg" tabindex="-1" role="basic" aria-hidden="true" style="display: none;">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+                    <h4 class="modal-title">基本设置保存</h4>
+                </div>
+                <div class="modal-body">
+                    确认要保存当前的基本设置吗？
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn red btn-outline" data-dismiss="modal">取消
+                    </button>
+                    <button type="button" id="saveSetting" class="btn green" data-dismiss="modal" id="setDevParamOk">保存
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../assets/global/plugins/jquery.min.js" type="text/javascript"></script>
+    <script src="../assets/global/plugins/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="../assets/global/scripts/app.min.js" type="text/javascript"></script>
+    <script src="../assets/layouts/layout/scripts/layout.min.js" type="text/javascript"></script>
+    <script src="../assets/global/plugins/jquery.blockui.min.js" type="text/javascript"></script>
+    <script src="../assets/global/plugins/bootstrap-table-master/bootstrap-table.min.js"></script>
+    <script src="../assets/global/plugins/bootstrap-table-master/locale/bootstrap-table-zh-CN.min.js"></script>
+    <script src="../assets/global/plugins/bootstrap-switch/js/bootstrap-switch.min.js" type="text/javascript"></script>
+    <script type="text/javascript">
+    $(document).ready(function() {
+        ///////////////////////////////////////////////////////////////////////////////////////////
+        // 基本设置switch开关（默认关闭）
+        $("[name='switchCtl']").bootstrapSwitch({
+            size: 'mini',
+            state: false,
+        });
+        // $("#signalSwitch").bootstrapSwitch('state', true);
+        $("[name='switchCtl']").parent().parent().parent().parent().next().hide();
+        $("#signalSwitch").parent().parent().parent().parent().next().next().hide();
+        $("[name='switchCtl']").bootstrapSwitch('onSwitchChange', function(event, state) {
+            if (state) {
+                // 开
+                if ($(this).attr("id") == "signalSwitch") {
+                    $(this).parent().parent().parent().parent().next().show().next().show();
+                } else {
+                    $(this).parent().parent().parent().parent().next().show();
+                }
+            } else {
+                // 关
+                if ($(this).attr("id") == "signalSwitch") {
+                    $(this).parent().parent().parent().parent().next().hide().next().hide();
+                } else {
+                    $(this).parent().parent().parent().parent().next().hide();
+                }
+            }
+        })
+        ///////////////////////////////////////////////////////////////////////////////////////////
+        // 保存基本设置
+        $("#saveSetting").click(function(event) {
+            event.preventDefault();
+            event.stopPropagation();
+            App.blockUI({
+                target: $("#settingDlg"),
+                boxed: true,
+                message: '保存基本设置中...',
+                zIndex: 20000,
+            });
+            window.setTimeout(function() {
+                $("#settingDlg").modal('hide');
+                App.unblockUI('#settingDlg');
+                App.alert({
+                    place: 'append', // append or prepent in container 
+                    type: 'success', // alert's type
+                    message: '基本设置保存成功', // alert's message
+                    close: true, // make alert closable
+                    reset: true, // close all previouse alerts first
+                    focus: true, // auto scroll to the alert after shown
+                    closeInSeconds: '5', // auto close after defined seconds
+                });
+            }, 3000);
+        })
+
+        ///////////////////////////////////////////////////////////////////////////////////////////
+        // 根据网卡数量显示和隐藏tab页
+        var tabs = ["2.4G", "5.8G", "5.8G"];
+        $("#navTabs").children().hide();
+        $("#tabContentPage").children().hide();
+        for (var i = 0; i < tabs.length; i++) {
+            // 显示需要的tab标题
+            var liTabId = "liTab_" + i;
+            var $li = $("#" + liTabId);
+            $li.children().text(tabs[i]);
+            $li.show();
+        }
+        // 显示默认tab
+        $("#tab_0").show();
+        ///////////////////////////////////////////////////////////////////////////////////////////
+        // 点击tab表头切换页面
+        $("a[data-toggle = tab]").click(function(e) {
+            e.stopPropagation(); // 阻止冒泡
+            e.preventDefault(); // 阻止默认事件
+            $("#navTabs").children().removeClass("active"); // 清空选中
+            $(this).parent().addClass("active"); // 选中表头
+            $("#tabContentPage").children().removeClass("active")
+                .hide(); // 清空内容并隐藏所有tab页
+            var $id = $(this).attr("href");
+            $("#" + $id).addClass("active")
+                .show(); // 激活内容并显示当前tab页
+        })
+
+        ////////////////////////////////////////////////////////////////////////////////////////////////
+        // 初始化表格
+        $('#tableTab0').bootstrapTable({
+            search: true, // 显示搜索框
+            // sortName: 'ssid', // 初始化排序字段
+            pagination: true, // 底部显示数量,
+            pageNumber: 1, //初始化加载第一页，默认第一页
+            pageSize: 5, //每页的记录行数
+            pageList: [5, 10, 25, 50, 100], //可供选择的每页的行数
+            striped: true,
+            toolbar: '#toolbar',
+            columns: [{ // 表头
+                field: 'ssid', // 域名
+                title: 'SSID名称', //文字名称
+                align: 'center', // 水平居中
+                valign: 'middle', // 垂直居中
+                sortable: true, //启用排序
+            }, {
+                field: 'wifiSwitch',
+                title: '无线开关',
+                align: 'center',
+                valign: 'middle',
+                sortable: true,
+                formatter: function(value, row, index) {
+                    var result = '';
+                    if (value == 'On') {
+                        result = '<span class="label label-sm label-success">' + value + '</span>';
+                    } else if (value == 'Off') {
+                        result = '<span class="label label-sm label-danger">' + value + '</span>';
+                    } else {
+                        result = value
+                    }
+                    return result;
+                }
+            }, {
+                field: 'wifiChannel',
+                title: '无线信道',
+                align: 'center', // 水平居中
+                valign: 'middle', // 垂直居中
+                sortable: true,
+            }, {
+                field: 'wifiProtocol',
+                title: '无线协议',
+                align: 'center', // 水平居中
+                valign: 'middle', // 垂直居中
+                sortable: true,
+            }, {
+                field: 'wifiBandWidth',
+                title: '无线频宽',
+                align: 'center', // 水平居中
+                valign: 'middle', // 垂直居中
+                sortable: true,
+            }, {
+                field: 'wifiPower',
+                title: '无线功率',
+                align: 'center', // 水平居中
+                valign: 'middle', // 垂直居中
+                sortable: true,
+            }, {
+                field: 'ssidSwitch',
+                title: 'SSID显示',
+                align: 'center', // 水平居中
+                valign: 'middle', // 垂直居中
+                sortable: true,
+                formatter: function(value, row, index) {
+                    var result = '';
+                    if (value == 'On') {
+                        result = '<span class="label label-sm label-success">' + value + '</span>';
+                    } else if (value == 'Off') {
+                        result = '<span class="label label-sm label-danger">' + value + '</span>';
+                    } else {
+                        result = value
+                    }
+                    return result;
+                }
+            }, {
+                field: 'pwdSwitch',
+                title: '密码开关',
+                align: 'center', // 水平居中
+                valign: 'middle', // 垂直居中
+                sortable: true,
+                formatter: function(value, row, index) {
+                    var result = '';
+                    if (value == 'On') {
+                        result = '<span class="label label-sm label-success">' + value + '</span>';
+                    } else if (value == 'Off') {
+                        result = '<span class="label label-sm label-danger">' + value + '</span>';
+                    } else {
+                        result = value
+                    }
+                    return result;
+                }
+            }, {
+                field: 'vlan',
+                title: 'VLAN',
+                align: 'center', // 水平居中
+                valign: 'middle', // 垂直居中
+                sortable: true,
+                formatter: function(value, row, index) {
+                    var result = '';
+                    if (value == 'On') {
+                        result = '<span class="label label-sm label-success">' + value + '</span>';
+                    } else if (value == 'Off') {
+                        result = '<span class="label label-sm label-danger">' + value + '</span>';
+                    } else {
+                        result = value
+                    }
+                    return result;
+                }
+            }, {
+                field: 'operate',
+                title: '操作',
+                align: 'center', // 水平居中
+                valign: 'middle', // 垂直居中
+                sortable: false,
+                width: '200px',
+                formatter: function(value, row, index) {
+                    var edit = '<a class="edit btn blue btn-circle btn-outline" style="margin-right: 10px" href="javascript:void(0)" >' + '<i class="fa  fa-pencil"></i>' + '修改' + '</a>';
+                    var del = '<a class="delete btn red btn-circle btn-outline" href="javascript:void(0)" >' + '<i class="fa  fa-trash-o"></i>' + '删除' + '</a>';
+                    return (edit + del);
+                },
+                events: 'operateEvents'
+            }],
+        });
+        var data = [{
+            ssid: '-',
+            wifiSwitch: 'Off',
+            wifiChannel: '-',
+            wifiProtocol: '-',
+            wifiBandWidth: '-',
+            wifiPower: '-',
+            ssidSwitch: '-',
+            pwdSwitch: '-',
+            vlan: '-'
+        }, {
+            ssid: 'DB25',
+            wifiSwitch: 'On',
+            wifiChannel: '自动',
+            wifiProtocol: '802.11n',
+            wifiBandWidth: '20MHz',
+            wifiPower: '10',
+            ssidSwitch: 'On',
+            pwdSwitch: 'Off',
+            vlan: '12'
+        }, {
+            ssid: 'DB26',
+            wifiSwitch: 'On',
+            wifiChannel: '自动',
+            wifiProtocol: '802.11n',
+            wifiBandWidth: '20MHz',
+            wifiPower: '10',
+            ssidSwitch: 'On',
+            pwdSwitch: 'Off',
+            vlan: '11'
+        }];
+        $('#tableTab0').bootstrapTable('append', data);
+
+        ////////////////////////////////////////////////////////////////////////////////////////////////
+        // 新增SSID
+        $("#addSSID").click(function(event) {
+            event.preventDefault();
+            // $("#addSSID").blur();
+            window.location.href = "./wifisetting.html";
+        })
+
+        if (getUrlParam('id')) {
+            $('#tableTab0').bootstrapTable('append', {
+                ssid: 'DB51111',
+                wifiSwitch: 'On',
+                wifiChannel: '自动',
+                wifiProtocol: '802.11n',
+                wifiBandWidth: '20MHz',
+                wifiPower: '10',
+                ssidSwitch: 'On',
+                pwdSwitch: 'Off',
+                vlan: '-'
+            });
+        }
+    })
+    ////////////////////////////////////////////////////////////////////////////////////////////////
+    // 编辑SSID
+    window.operateEvents = {
+        'click .edit': function(e, value, row, index) {
+            alert("编辑第" + (index + 1) + "行");
+            var newdata = {
+                ssid: 'DB24new',
+                wifiSwitch: 'On',
+                wifiChannel: '自动',
+                wifiProtocol: '802.11n',
+                wifiBandWidth: '20MHz',
+                wifiPower: '10',
+                ssidSwitch: 'Off',
+                pwdSwitch: 'On',
+                vlan: '-'
+            }
+            $('#tableTab0').bootstrapTable('updateRow', { index: index, row: newdata });
+        },
+        'click .delete': function(e, value, row, index) {
+            alert("删除第" + (index + 1) + "行");
+            var ssids = [];
+            ssids.push(row.ssid);
+            $('#tableTab0').bootstrapTable('remove', { field: 'ssid', values: ssids });
+        }
+    }
+
+    // 获取url参数
+    function getUrlParam(name) {
+        var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)"); //构造一个含有目标参数的正则表达式对象
+        var r = window.location.search.substr(1).match(reg); //匹配目标参数
+        if (r != null) return unescape(r[2]);
+        return null; //返回参数值
+    }
+    </script>
+</body>
+
+</html>

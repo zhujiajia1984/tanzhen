@@ -1,0 +1,560 @@
+<!--[if IE 8]> <html lang="en" class="ie8 no-js"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9 no-js"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="en">
+<!--<![endif]-->
+
+<head>
+    <meta charset="utf-8" />
+    <title>管理平台</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <link href="../assets/global/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/global/plugins/simple-line-icons/simple-line-icons.min.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/global/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/global/css/components.min.css" rel="stylesheet" id="style_components" type="text/css" />
+    <link href="../assets/global/css/plugins.min.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/layouts/layout/css/layout.min.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/layouts/layout/css/themes/darkblue.min.css" rel="stylesheet" type="text/css" id="style_color" />
+    <link href="../assets/global/plugins/bootstrap-switch/css/bootstrap-switch.min.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/global/plugins/bootstrap-select/css/bootstrap-select.min.css" rel="stylesheet" type="text/css" />
+    <style type="text/css">
+    li.selected {
+        background-color: rgb(225, 229, 236);
+    }
+
+    li.selected span {
+        color: black;
+    }
+    </style>
+</head>
+<!-- END HEAD -->
+
+<body class="page-header-fixed page-sidebar-closed-hide-logo page-container-bg-solid page-content-white">
+    <div class="page-wrapper">
+        <div class="page-header navbar navbar-fixed-top">
+            <div class="page-header-inner ">
+                <div class="page-logo">
+                    <a href="javascript:;">
+                    <img src="../assets/layouts/layout/img/logo.png" alt="logo" class="logo-default" width="87" height="14"/> </a>
+                    <div class="menu-toggler sidebar-toggler">
+                        <span></span>
+                    </div>
+                </div>
+                <a href="javascript:;" class="menu-toggler responsive-toggler" data-toggle="collapse" data-target=".navbar-collapse">
+                <span></span>
+            </a>
+                <div class="top-menu">
+                    <ul class="nav navbar-nav pull-right">
+                        <!-- BEGIN USER LOGIN DROPDOWN -->
+                        <!-- DOC: Apply "dropdown-dark" class after below "dropdown-extended" to change the dropdown styte -->
+                        <li class="dropdown dropdown-user">
+                            <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
+                            <span class="username username-hide-on-mobile"> Nick </span>
+                            <!--<i class="fa fa-angle-down"></i>-->
+                        </a>
+                        </li>
+                        <!-- END USER LOGIN DROPDOWN -->
+                        <!-- BEGIN QUICK SIDEBAR TOGGLER -->
+                        <!-- DOC: Apply "dropdown-dark" class after below "dropdown-extended" to change the dropdown styte -->
+                        <li class="dropdown dropdown-quick-sidebar-toggler">
+                            <a href="javascript:;" class="dropdown-toggle">
+                            <i class="icon-logout"></i>
+                        </a>
+                        </li>
+                        <!-- END QUICK SIDEBAR TOGGLER -->
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="clearfix"></div>
+        <div class="page-container">
+            <div class="page-sidebar-wrapper">
+                <div class="page-sidebar navbar-collapse collapse">
+                    <ul class="page-sidebar-menu  page-header-fixed " data-keep-expanded="false" data-auto-scroll="true" data-slide-speed="200" style="padding-top: 20px">
+                        <li class="sidebar-search-wrapper" </li>
+                            <li class="nav-item start active">
+                                <a href="index.html" class="nav-link nav-toggle">
+                            <i class="icon-home"></i>
+                            <!--<i class="iconfont icon-iconset0401"></i>-->
+                            <span class="title">系统状态</span>
+                            <span class="selected"></span>
+                            <span class="arrow open"></span>
+                        </a>
+                                <ul class="sub-menu">
+                                    <li class="nav-item start">
+                                        <a href="index.html" class="nav-link ">
+                                    <i class="icon-bar-chart"></i>
+                                    <span class="title">系统总览</span>
+                                    <span class="selected"></span>
+                                </a>
+                                    </li>
+                                    <li class="nav-item start open ">
+                                        <a href="quickConfig.html" class="nav-link ">
+                                    <i class="icon-bulb"></i>
+                                    <span class="title">快速配置</span>
+                                    <!--<span class="badge badge-success">1</span>-->
+                                </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="nav-item  ">
+                                <a href="javascript:;" class="nav-link nav-toggle">
+                            <i class="icon-diamond"></i>
+                            <span class="title">网络管理</span>
+                            <span class="arrow"></span>
+                        </a>
+                                <ul class="sub-menu">
+                                    <li class="nav-item  ">
+                                        <a href="networksetting.html" class="nav-link ">
+                                    <i class="icon-bulb"></i>
+                                    <span class="title">网络设置</span>
+                                </a>
+                                    </li>
+                                    <li class="nav-item  ">
+                                        <a href="vlan.html" class="nav-link ">
+                                    <i class="icon-bulb"></i>
+                                    <span class="title">无线设置</span>
+                                </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="nav-item  ">
+                                <a href="javascript:;" class="nav-link nav-toggle">
+                            <i class="icon-diamond"></i>
+                            <span class="title">系统工具</span>
+                            <span class="arrow"></span>
+                        </a>
+                                <ul class="sub-menu">
+                                    <li class="nav-item  ">
+                                        <a href="systemInfo.html" class="nav-link ">
+                                    <i class="icon-bulb"></i>
+                                    <span class="title">基础信息管理</span>
+                                </a>
+                                    </li>
+                                    <li class="nav-item  ">
+                                        <a href="systemUpdate.html" class="nav-link ">
+                                    <i class="icon-bulb"></i>
+                                    <span class="title">固件管理</span>
+                                </a>
+                                    </li>
+                                    <li class="nav-item  ">
+                                        <a href="systemReboot.html" class="nav-link ">
+                                    <i class="icon-bulb"></i>
+                                    <span class="title">重启管理</span>
+                                </a>
+                                    </li>
+                                    >
+                                </ul>
+                            </li>
+                    </ul>
+                    <!-- END SIDEBAR MENU -->
+                    <!-- END SIDEBAR MENU -->
+                </div>
+                <!-- END SIDEBAR -->
+            </div>
+            <div class="page-content-wrapper">
+                <div class="page-content">
+                    <div class="page-bar">
+                        <ul class="page-breadcrumb">
+                            <li>
+                                <span>状态管理</span>
+                                <i class="fa fa-circle"></i>
+                            </li>
+                            <li>
+                                <span>快速配置</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <h1 class="page-title">快速配置
+                    <small></small>
+                </h1>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="portlet light bordered" id="form_wizard_1">
+                                <div class="portlet-title">
+                                    <div class="caption">
+                                        <i class=" icon-settings font-green"></i>
+                                        <span class="caption-subject font-green bold uppercase"> 设置向导
+                                        <!--<span class="step-title">Step 1 of 4</span>-->
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="portlet-body form">
+                                    <form class="form-horizontal" action="#" id="submit_form" method="POST" novalidate="novalidate">
+                                        <div class="form-wizard">
+                                            <div class="form-body">
+                                                <div class="mt-element-step">
+                                                    <div class="row step-thin">
+                                                        <div class="col-md-4 bg-grey mt-step-col active" id="step111">
+                                                            <div class="mt-step-number bg-white font-grey">1</div>
+                                                            <div class="mt-step-title uppercase font-grey-cascade">模式选择
+                                                            </div>
+                                                            <div class="mt-step-content font-grey-cascade">Mode Select</div>
+                                                        </div>
+                                                        <div class="col-md-4 bg-grey mt-step-col" id="step222">
+                                                            <div class="mt-step-number bg-white font-grey">2</div>
+                                                            <div class="mt-step-title uppercase font-grey-cascade">网络设置
+                                                            </div>
+                                                            <div class="mt-step-content font-grey-cascade">Network Setting
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-4 bg-grey mt-step-col" id="step333">
+                                                            <div class="mt-step-number bg-white font-grey">3</div>
+                                                            <div class="mt-step-title uppercase font-grey-cascade">保存配置
+                                                            </div>
+                                                            <div class="mt-step-content font-grey-cascade">Setting Complete
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="tab-content">
+                                                    <div class="tab-pane active" id="tab1">
+                                                        <div class="col-md-12 portlet light form-fit bordered">
+                                                            <div class="portlet-body form">
+                                                                <form action="javascript:;" class="form-horizontal form-row-seperated">
+                                                                    <div class="form-body">
+                                                                        <div class="form-group">
+                                                                            <label class="control-label col-md-3">模式选择：</label>
+                                                                            <div class="col-md-9">
+                                                                                <div class="btn-group btn-group-devided form-control-static" data-toggle="buttons">
+                                                                                    <label class="btn btn-transparent red btn-outline btn-circle btn-sm active">
+                                                                                        <input type="radio" name="modeSelectAll" class="toggle" id="routerMode" checked="true">路由模式</label>
+                                                                                    <label class="btn btn-transparent red btn-outline btn-circle btn-sm">
+                                                                                        <input type="radio" name="modeSelectAll" class="toggle" id="apMode">AP模式</label>
+                                                                                </div>
+                                                                                <span class="help-block" id="modeExplain"> 路由模式：通过WAN口接入Internet，功能与无线路由器功能相同。 </span>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </form>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="tab-pane" id="tab2">
+                                                        <div class="col-md-12 portlet light form-fit bordered" name="routerModeContent">
+                                                            <div class="portlet-title">
+                                                                <div class="caption">
+                                                                    <i class="icon-social-dribbble font-green"></i>
+                                                                    <span class="caption-subject font-green bold uppercase">外网设置</span>
+                                                                </div>
+                                                            </div>
+                                                            <div class="portlet-body form">
+                                                                <form action="javascript:;" class="form-horizontal form-row-seperated">
+                                                                    <div class="form-body">
+                                                                        <div class="form-group" name="modeSelectNet">
+                                                                            <label class="control-label col-md-3">连接类型</label>
+                                                                            <div class="col-md-4">
+                                                                                <div name="selectDiv" class="btn-group bootstrap-select bs-select form-control">
+                                                                                    <button type="button" class="btn dropdown-toggle btn-default" data-toggle="dropdown" role="button" title="DHCP自动获取" aria-expanded="true">
+                                                                                        <span name="selectBtnSpan" class="filter-option pull-left" index="0">DHCP自动获取</span>&nbsp;
+                                                                                        <span class="bs-caret">
+                                                                <span class="caret"></span>
+                                                                                        </span>
+                                                                                    </button>
+                                                                                    <div class="dropdown-menu open" role="combobox" style="max-height: 518px; overflow: hidden; min-height: 0px;">
+                                                                                        <ul class="dropdown-menu inner" role="listbox" aria-expanded="true" name="ulDropDownMenu" style="max-height: 516px; overflow-y: auto; min-height: 0px;">
+                                                                                            <li data-original-index="0">
+                                                                                                <a tabindex="0" class="" style="" data-tokens="null" role="option" aria-disabled="false" aria-selected="true">
+                                                                                                <span class="text">DHCP自动获取</span>
+                                                                                                <span class="fa fa-check check-mark"></span>
+                                                                                            </a>
+                                                                                            </li>
+                                                                                            <li data-original-index="1">
+                                                                                                <a tabindex="0" class="" style="" data-tokens="null" role="option" aria-disabled="false" aria-selected="false">
+                                                                                                <span class="text">PPPOE拨号</span>
+                                                                                                <span class="fa fa-check check-mark"></span>
+                                                                                            </a>
+                                                                                            </li>
+                                                                                            <li data-original-index="2">
+                                                                                                <a tabindex="0" class="" style="" data-tokens="null" role="option" aria-disabled="false" aria-selected="false">
+                                                                                                <span class="text">静态IP设置</span>
+                                                                                                <span class="fa fa-check check-mark"></span>
+                                                                                            </a>
+                                                                                            </li>
+                                                                                        </ul>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="form-group" style="display: none;" name="pppoeItem">
+                                                                            <label class="control-label col-md-3">账号</label>
+                                                                            <div class="col-md-4">
+                                                                                <input type="text" placeholder="上网账号" class="form-control">
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="form-group" style="display: none;" name="pppoeItem">
+                                                                            <label class="control-label col-md-3">密码</label>
+                                                                            <div class="col-md-4">
+                                                                                <input type="text" placeholder="上网密码" class="form-control">
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="form-group" style="display: none;" name="staticIpItem">
+                                                                            <label class="control-label col-md-3">IP地址</label>
+                                                                            <div class="col-md-4">
+                                                                                <input type="text" placeholder="IP地址" class="form-control">
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="form-group" style="display: none;" name="staticIpItem">
+                                                                            <label class="control-label col-md-3">子网掩码</label>
+                                                                            <div class="col-md-4">
+                                                                                <input type="text" placeholder="子网掩码" class="form-control">
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="form-group" style="display: none;" name="staticIpItem">
+                                                                            <label class="control-label col-md-3">网关地址</label>
+                                                                            <div class="col-md-4">
+                                                                                <input type="text" placeholder="网关地址" class="form-control">
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="form-group" style="display: none;" name="staticIpItem">
+                                                                            <label class="control-label col-md-3">首选DNS服务器</label>
+                                                                            <div class="col-md-4">
+                                                                                <input type="text" placeholder="首选DNS服务器" class="form-control">
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="form-group" style="display: none;" name="staticIpItem">
+                                                                            <label class="control-label col-md-3">备选DNS服务器</label>
+                                                                            <div class="col-md-4">
+                                                                                <input type="text" placeholder="备选DNS服务器" class="form-control">
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </form>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-12 portlet light form-fit bordered" name="apModeContent">
+                                                            <div class="portlet-title">
+                                                                <div class="caption">
+                                                                    <i class="icon-social-dribbble font-green"></i>
+                                                                    <span class="caption-subject font-green bold uppercase">内网设置</span>
+                                                                </div>
+                                                            </div>
+                                                            <div class="portlet-body form">
+                                                                <!-- BEGIN FORM-->
+                                                                <form action="#" class="form-horizontal form-bordered">
+                                                                    <div class="form-body">
+                                                                        <div class="form-group">
+                                                                            <label class="control-label col-md-3">内网IP地址</label>
+                                                                            <div class="col-md-6">
+                                                                                <input type="text" placeholder="例：192.168.2.1" class="form-control">
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="form-group">
+                                                                            <label class="control-label col-md-3">子网掩码</label>
+                                                                            <div class="col-md-6">
+                                                                                <input type="text" placeholder="例：255.255.255.0" class="form-control">
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </form>
+                                                                <!-- END FORM-->
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="tab-pane" id="tab3">
+                                                        <div class="note note-success">
+                                                            <h4 class="block">配置完成！</h4>
+                                                            <p> 点击保存后应用配置，并自动跳转到系统总览中查看状态 </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-actions">
+                                                <div class="row">
+                                                    <div class="col-md-offset-3 col-md-9">
+                                                        <a href="javascript:;" class="btn default button-previous disabled" style="display: none;" id="btnPre">
+                                                        <i class="fa fa-angle-left"></i> 上一步 </a>
+                                                        <a href="javascript:;" class="btn btn-outline green button-next" id="btnNext">
+                                                        下一步
+                                                        <i class="fa fa-angle-right"></i>
+                                                    </a>
+                                                        <a href="javascript:;" class="btn blue button-submit" style="display: none;" id="btnSubmit"> 保存
+                                                        <i class="fa fa-check"></i>
+                                                    </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--[if lt IE 9]>
+<script src="../assets/global/plugins/respond.min.js"></script>
+<script src="../assets/global/plugins/excanvas.min.js"></script>
+<script src="../assets/global/plugins/ie8.fix.min.js"></script>
+<![endif]-->
+    <script src="../assets/global/plugins/jquery.min.js" type="text/javascript"></script>
+    <script src="../assets/global/plugins/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="../assets/global/scripts/app.min.js" type="text/javascript"></script>
+    <script src="../assets/layouts/layout/scripts/layout.min.js" type="text/javascript"></script>
+    <!--<script src="../assets/global/plugins/bootstrap-switch/js/bootstrap-switch.min.js" type="text/javascript"></script>-->
+    <!--<script src="../assets/global/plugins/bootstrap-select/js/bootstrap-select.min.js" type="text/javascript"></script>-->
+    <!--<script src="../assets/pages/scripts/components-bootstrap-select.min.js" type="text/javascript"></script>-->
+    <!--<script src="../assets/global/plugins/bootstrap-wizard/my.js" type="text/javascript"></script>-->
+    <script>
+    $(document).ready(function() {
+        ////////////////////////////////////////////////////////////////////////////////////////////////////
+        // 模式选择
+        $('input:radio[name="modeSelectAll"]').change(function() {
+            switch ($(this).attr("id")) {
+                case "routerMode":
+                    $("#modeExplain").text("路由模式：通过WAN口接入Internet，功能与无线路由器功能相同。");
+                    break;
+                case "apMode":
+                    $("#modeExplain").text("AP模式：主要是将有线信号转变成无线wifi信号，扩大WiFi信号覆盖范围");
+                    break;
+                default:
+                    break;
+            }
+        });
+        ////////////////////////////////////////////////////////////////////////////////////////////////////
+        // 切换tab页（下一步）
+        $("#btnNext").click(function() {
+            // step状态切换
+            var $curStep = $("div.row.step-thin").children(".active");
+            var $nextStep = $curStep.next();
+            $curStep.removeClass("active");
+            $curStep.addClass("done");
+            $nextStep.addClass("active");
+            // tab页面切换
+            var $curTab = $("div.tab-content").children(".active");
+            var $nextTab = $curTab.next();
+            $curTab.removeClass("active");
+            $nextTab.addClass("active");
+            // 按钮切换
+            $("#btnNext").blur();
+            $("#btnPre").show();
+            $("#btnPre").removeClass("disabled");
+            if ($nextTab.attr("id") == "tab3") { // 切换到最后一个tab页，显示保存按钮，隐藏下一步按钮
+                $("#btnNext").hide();
+                $("#btnSubmit").show();
+            }
+            // 是否切换为第二个tab，如果是则需要判断第一个页面模式来显示第二个页面内容
+            if ($nextTab.attr("id") == "tab2") {
+                switch ($("input:radio[name=modeSelectAll]:checked").attr("id")) {
+                    case "routerMode":
+                        $("div[name=routerModeContent]").show();
+                        $("div[name=apModeContent]").hide();
+                        break;
+                    case "apMode":
+                        $("div[name=routerModeContent]").hide();
+                        $("div[name=apModeContent]").show();
+                        break;
+                    default:
+                        break;
+                }
+            }
+        })
+        ////////////////////////////////////////////////////////////////////////////////////////////////////
+        // 切换tab页（上一步）
+        $("#btnPre").click(function() {
+            // step状态切换
+            var $curStep = $("div.row.step-thin").children(".active");
+            var $preStep = $curStep.prev();
+            $curStep.removeClass("active");
+            $curStep.removeClass("done");
+            $preStep.removeClass("done");
+            $preStep.addClass("active");
+            // tab页面切换
+            var $curTab = $("div.tab-content").children(".active");
+            var $preTab = $curTab.prev();
+            $curTab.removeClass("active");
+            $preTab.addClass("active");
+            // 按钮切换
+            $("#btnPre").blur();
+            $("#btnSubmit").hide();
+            $("#btnNext").show();
+            if ($preTab.attr("id") == "tab1") { // 切换到第一个tab页，显示下一步按钮，隐藏上一步和保存
+                $("#btnPre").hide();
+            }
+        })
+
+        ///////////////////////////////////////////////////////////////////////////////////////////
+        // 选择下拉项目并显示
+        $("[name=ulDropDownMenu] li").click(function(event) {
+            var selectName = $(this).first().first().text();
+            var index = $(this).attr("data-original-index");
+            var $btnSpan = $(this).parent().parent().parent().find("button[type=button]").children("span[name=selectBtnSpan]");
+            $btnSpan.text(selectName);
+            $btnSpan.attr("index", index);
+
+            // 显示或者隐藏下方页面内容
+            switch (index) {
+                case "0":
+                    $("div[name=pppoeItem]").hide();
+                    $("div[name=staticIpItem]").hide();
+                    break;
+                case "1":
+                    $("div[name=pppoeItem]").show();
+                    $("div[name=staticIpItem]").hide();
+                    break;
+                case "2":
+                    $("div[name=pppoeItem]").hide();
+                    $("div[name=staticIpItem]").show();
+                    break;
+                default:
+                    break;
+            }
+        })
+
+        ///////////////////////////////////////////////////////////////////////////////////////////
+        // 点击选择框button后高亮已选中项目
+        $("[name=selectDiv]").click(function() {
+            var index = $(this).children("button[type=button]").children("span[name=selectBtnSpan]").attr("index");
+            var $selects = $(this).children("div.dropdown-menu").children("ul[name=ulDropDownMenu]").children();
+            //            var $selects = $('li[data-original-index]');
+            $selects.removeClass("selected"); //清空
+            for (var i = 0; i < $selects.length; i++) {
+                var cur = $selects.eq(i);
+                if (cur.attr("data-original-index") == index) {
+                    cur.addClass("selected"); // 高亮选中
+                }
+            }
+        })
+
+        ///////////////////////////////////////////////////////////////////////////////////////////
+        // 点击保存后提交表单
+        $("#contentSubmit").click(function() {
+            var $selects = $(this).parent().parent().parent().parent().find("span[name=selectBtnSpan]");
+            alert($selects.eq(0).text() + "\n" + $selects.eq(1).text());
+        })
+
+        ///////////////////////////////////////////////////////////////////////////////////////////
+        // 切换密码开关
+        $("div[name=switchDiv]").click(function() {
+            if ($(this).hasClass("bootstrap-switch-on")) {
+                // 切换到off
+                $(this).removeClass("bootstrap-switch-on");
+                $(this).addClass("bootstrap-switch-off");
+                $(this).children().first().css("margin-left", "-33px");
+                // 切换密码开关
+                if ($(this).attr("pwd") == "switchPwd") {
+                    $(this).parent().parent().next().hide()
+                        .next().hide()
+                        .next().hide();
+                }
+            } else {
+                // 切换到on
+                $(this).removeClass("bootstrap-switch-off");
+                $(this).addClass("bootstrap-switch-on");
+                $(this).children().first().css("margin-left", "0px");
+                // 切换密码开关
+                if ($(this).attr("pwd") == "switchPwd") {
+                    $(this).parent().parent().next().show()
+                        .next().show()
+                        .next().show();
+                }
+            }
+        })
+    })
+    </script>
+</body>
+
+</html>
