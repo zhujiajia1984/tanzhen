@@ -124,21 +124,21 @@
 	"buffers":
 	[
 		{
-			"file": "html/index.html",
-			"settings":
-			{
-				"buffer_size": 39735,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
 			"file": "html/networksetting.html",
 			"settings":
 			{
-				"buffer_size": 29384,
+				"buffer_size": 30281,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "html/index.html",
+			"settings":
+			{
+				"buffer_size": 40410,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
 			}
 		}
 	],
@@ -251,17 +251,13 @@
 	"expanded_folders":
 	[
 		"/D/Project/web/tanzhen",
-		"/D/Project/web/tanzhen/assets/global",
-		"/D/Project/web/tanzhen/assets/global/plugins",
-		"/D/Project/web/tanzhen/assets/global/plugins/iconfont",
-		"/D/Project/web/tanzhen/assets/layouts",
 		"/D/Project/web/tanzhen/html"
 	],
 	"file_history":
 	[
 		"/D/Project/web/tanzhen/html/index.html",
-		"/D/Project/web/tanzhen/html/systemReboot.html",
 		"/D/Project/web/tanzhen/html/networksetting.html",
+		"/D/Project/web/tanzhen/html/systemReboot.html",
 		"/D/Project/web/tanzhen/html/systemInfo.html",
 		"/D/Project/web/tanzhen/html/systemUpdate.html",
 		"/D/Project/web/tanzhen/html/login.html",
@@ -407,6 +403,12 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"localNetSet",
+			"local",
+			"设置",
+			"localNetSet",
+			"设置",
+			"icon-setting",
 			"tab0",
 			"myTab",
 			"myTab33",
@@ -497,55 +499,57 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 1,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "html/index.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 39735,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								26138,
-								26138
-							]
-						],
-						"settings":
-						{
-							"auto_complete": false,
-							"syntax": "Packages/HTML/HTML.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 13294.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
 					"file": "html/networksetting.html",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 29384,
+						"buffer_size": 30281,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								23860,
-								23860
+								21407,
+								21407
+							]
+						],
+						"settings":
+						{
+							"auto_complete": false,
+							"is_init_dirty_state": false,
+							"origin_encoding": "UTF-8",
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 3095.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "html/index.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 40410,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								17629,
+								17628
 							]
 						],
 						"settings":
@@ -556,10 +560,10 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 7262.0,
+						"translation.y": 9060.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 0,
 					"type": "text"
 				}
 			]
