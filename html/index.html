@@ -274,6 +274,7 @@
                                                 <tr>
                                                     <th>主机名称</th>
                                                     <th>主机型号</th>
+                                                    <th>主机MAC</th>
                                                     <th>运行模式</th>
                                                     <th>内存 / FLASH</th>
                                                     <th>固件版本</th>
@@ -285,6 +286,7 @@
                                                 <tr>
                                                     <td>DoubleCom</td>
                                                     <td>DB6000-T</td>
+                                                    <td>ef:34:eb:11:56:tr</td>
                                                     <td>探针</td>
                                                     <td> 128M / 16M</td>
                                                     <td> v20170607-DBUI0.11.1</td>
@@ -362,7 +364,7 @@
                                         <span class="caption-subject font-red sbold uppercase">外网状态</span>
                                     </div>
                                     <div class="actions">
-                                        <a class="btn btn-circle btn-icon-only btn-default" href="javascript:;" title="设置">
+                                        <a class="btn btn-circle btn-icon-only btn-default" href="javascript:;" title="设置" id="internetSet">
                                         <i class="icon-settings"></i>
                                     </a>
                                     </div>
@@ -425,7 +427,7 @@
                                         <span class="caption-subject font-purple sbold uppercase">内网状态</span>
                                     </div>
                                     <div class="actions">
-                                        <a class="btn btn-circle btn-icon-only btn-default" href="javascript:;" title="设置">
+                                        <a class="btn btn-circle btn-icon-only btn-default" href="javascript:;" title="设置" id="localNetSet">
                                         <i class="icon-settings"></i>
                                     </a>
                                     </div>
@@ -708,6 +710,18 @@
                 window.location.href = "./login.html";
             }, 5000);
         });
+        ////////////////////////////////////////////////////////////////////////////////////
+        // 点击外网和内网设置
+        $("#localNetSet").click(function(e) {
+            e.preventDefault();
+            Cookies.set('net', 'local');
+            window.location.href = "./networksetting.html"
+        })
+        $("#internetSet").click(function(e) {
+            e.preventDefault();
+            Cookies.set('net', 'internet');
+            window.location.href = "./networksetting.html"
+        })
     })
     </script>
 </body>
